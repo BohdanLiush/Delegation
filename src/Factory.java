@@ -1,19 +1,12 @@
 public class Factory {
-    private Work work;
 
-    public Factory(Work work) {
-        this.work = work;
-    }
-
-    Human human = new Human();
-    Car car = new Car();
-
+    public Work work;
+    public Human human = new Human();
     public Assemblage assemblage = new Assemblage();
     public Paint paint = new Paint();
 
-    public Factory(Assemblage assemblage, Paint paint) {
-        this.assemblage = assemblage;
-        this.paint = paint;
+    public Factory() {
+        Car car = new Car();
     }
 
     public void painting(){
@@ -28,8 +21,6 @@ public class Factory {
         human.giveCar();
     }
 
-    public void newCar(){
-        new Factory(assemblage,paint);
-    }
+
 
 }
